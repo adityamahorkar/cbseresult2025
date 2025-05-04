@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CBSE Class XII Results 2025</title>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f7; margin: 0; padding: 0;">
+
+  <!-- Header Section -->
+  <div style="background-color: #ffffff; padding: 35px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
+    <img src="https://cbse.gov.in/cbsenew/documents//CBSE_logo.png" alt="CBSE Logo" style="width:100px; margin-bottom: 15px;">
+    <h1 style="color:#003366; margin: 8px 0; font-size: 28px;">केन्द्रीय माध्यमिक शिक्षा बोर्ड</h1>
+    <h2 style="color:#003366; margin: 8px 0; font-size: 26px;">Central Board of Secondary Education</h2>
+    <h3 style="color:#990000; margin: 8px 0; font-size: 22px;">Senior School Certificate Examination (Class XII) Results 2025</h3>
+  </div>
+
+  <!-- Input Form Section -->
+  <div style="max-width: 640px; margin: 60px auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); padding: 40px;">
+    <form id="cbseForm">
+      <h3 style="text-align: center; color: #003366; margin-bottom: 30px; font-size: 22px;">Enter Your Credentials</h3>
+
+      <label for="roll" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Roll Number</label>
+      <input type="text" id="roll" name="roll" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
+
+      <label for="school" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">School Number</label>
+      <input type="text" id="school" name="school" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
+
+      <label for="center" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Centre Number</label>
+      <input type="text" id="center" name="center" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
+
+      <label for="admit" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Admit Card ID</label>
+      <input type="text" id="admit" name="admit" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 30px;">
+
+      <div style="text-align: center;">
+        <input type="submit" value="Submit" style="background-color:#003366; color:white; border:none; padding:14px 30px; font-size: 16px; border-radius:8px; font-weight:bold; cursor:pointer; margin-right:12px;">
+        <input type="reset" value="Reset" style="background-color:#990000; color:white; border:none; padding:14px 30px; font-size: 16px; border-radius:8px; font-weight:bold; cursor:pointer;">
+      </div>
+
+      <!-- Error Message -->
+      <p id="errorMsg" style="color: red; font-weight: bold; text-align: center; font-size: 16px; margin-top: 30px; display: none;">
+        Due to server and evaluation error, result will be processed before 4:00 PM (Today). Kindly have a patience !
+      </p>
+
+      <!-- Note Below Input Box -->
+      <p style="text-align: center; font-size: 15px; color: #003366; margin-top: 35px;">
+        <strong>Note:</strong> <a href="#" style="color: #003366; text-decoration: underline; font-weight: bold;">Click here to Download your CBSE Admit Card</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <div style="text-align:center; font-size: 15px; color: gray; margin-top: 50px;">
+    This site is designed and hosted by National Informatics Centre (NIC)<br>
+    Data Provided by CBSE, New Delhi
+  </div>
+
+  <!-- JavaScript to show error -->
+  <script>
+    document.getElementById("cbseForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("errorMsg").style.display = "block";
+    });
+  </script>
+
+</body>
+</html>
