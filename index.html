@@ -3,62 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <title>CBSE Class XII Results 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+    }
+    .header {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 20px;
+      border-bottom: 3px solid #003366;
+    }
+    .header img {
+      width: 70px;
+    }
+    .header h1 {
+      margin: 10px 0 5px;
+      color: #003366;
+      font-size: 22px;
+    }
+    .header h2 {
+      margin: 0;
+      color: #990000;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 500px;
+      background-color: #ffffff;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      padding: 10px;
+      font-size: 14px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    input[type="submit"] {
+      background-color: #003366;
+      color: white;
+    }
+    input[type="reset"] {
+      background-color: #990000;
+      color: white;
+    }
+    .note {
+      text-align: center;
+      font-size: 14px;
+      padding-top: 15px;
+    }
+    .note a {
+      color: #003366;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: gray;
+      margin: 30px 10px;
+    }
+    #loadingSpinner {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #003366;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 18px; }
+      .header h2 { font-size: 14px; }
+      .container {
+        margin: 10px;
+        padding: 15px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        width: 45%;
+        margin: 5px 2%;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f7; margin: 0; padding: 0;">
+<body>
 
-  <!-- Header Section -->
-  <div style="background-color: #ffffff; padding: 35px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;">
-    <img src="https://cbse.gov.in/cbsenew/documents//CBSE_logo.png" alt="CBSE Logo" style="width:100px; margin-bottom: 15px;">
-    <h1 style="color:#003366; margin: 8px 0; font-size: 28px;">केन्द्रीय माध्यमिक शिक्षा बोर्ड</h1>
-    <h2 style="color:#003366; margin: 8px 0; font-size: 26px;">Central Board of Secondary Education</h2>
-    <h3 style="color:#990000; margin: 8px 0; font-size: 22px;">Senior School Certificate Examination (Class XII) Results 2025</h3>
+  <div class="header">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/CBSE_Logo.png/200px-CBSE_Logo.png" alt="CBSE Logo">
+    <h1>Central Board of Secondary Education</h1>
+    <h2>Senior School Certificate Examination (Class XII) Results 2025</h2>
   </div>
 
-  <!-- Input Form Section -->
-  <div style="max-width: 640px; margin: 60px auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); padding: 40px;">
-    <form id="cbseForm">
-      <h3 style="text-align: center; color: #003366; margin-bottom: 30px; font-size: 22px;">Enter Your Credentials</h3>
-
-      <label for="roll" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Roll Number</label>
-      <input type="text" id="roll" name="roll" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
-
-      <label for="school" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">School Number</label>
-      <input type="text" id="school" name="school" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
-
-      <label for="center" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Centre Number</label>
-      <input type="text" id="center" name="center" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 25px;">
-
-      <label for="admit" style="display:block; margin-bottom: 8px; color:#333; font-weight: bold; font-size: 18px;">Admit Card ID</label>
-      <input type="text" id="admit" name="admit" required style="width:100%; padding:14px; font-size: 16px; border:1px solid #ccc; border-radius: 8px; margin-bottom: 30px;">
-
-      <div style="text-align: center;">
-        <input type="submit" value="Submit" style="background-color:#003366; color:white; border:none; padding:14px 30px; font-size: 16px; border-radius:8px; font-weight:bold; cursor:pointer; margin-right:12px;">
-        <input type="reset" value="Reset" style="background-color:#990000; color:white; border:none; padding:14px 30px; font-size: 16px; border-radius:8px; font-weight:bold; cursor:pointer;">
-      </div>
-
-      <!-- Error Message -->
-      <p id="errorMsg" style="color: red; font-weight: bold; text-align: center; font-size: 16px; margin-top: 30px; display: none;">
-        Due to server and evaluation error, result will be processed before 4:00 PM (Today). Kindly have a patience !
-      </p>
-
-      <!-- Note Below Input Box -->
-      <p style="text-align: center; font-size: 15px; color: #003366; margin-top: 35px;">
-        <strong>Note:</strong> <a href="#" style="color: #003366; text-decoration: underline; font-weight: bold;">Click here to Download your CBSE Admit Card</a>
-      </p>
+  <div class="container" id="formContainer">
+    <form id="resultForm">
+      <table>
+        <tr><td colspan="2" style="text-align: center; font-weight: bold; background-color: #e5f0ff;">Enter Your Details</td></tr>
+        <tr><td>Roll Number:</td><td><input type="text" name="roll" required></td></tr>
+        <tr><td>School No.:</td><td><input type="text" name="school" required></td></tr>
+        <tr><td>Centre No.:</td><td><input type="text" name="center" required></td></tr>
+        <tr><td>Admit Card ID:</td><td><input type="text" name="admit" required></td></tr>
+        <tr>
+          <td colspan="2" style="text-align: center;">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="note">
+            <strong>Note:</strong>
+            <a href="https://forms.gle/tGFZjtQh2qWb4Qdr7" target="_blank">
+              Click here to Download your CBSE Admit Card
+            </a>.
+          </td>
+        </tr>
+      </table>
     </form>
+
+    <div id="loadingSpinner">
+      <div class="spinner"></div>
+      <p style="text-align: center; font-weight: bold;">Processing your result...</p>
+    </div>
   </div>
 
-  <!-- Footer -->
-  <div style="text-align:center; font-size: 15px; color: gray; margin-top: 50px;">
+  <div id="pdfContainer" style="display: none; max-width: 800px; margin: auto;">
+    <iframe src="https://drive.google.com/file/d/18KpWZ8fLXRKzfu-Sdtf4VKuu9K4oqnas/preview"></iframe>
+  </div>
+
+  <div class="footer">
     This site is designed and hosted by National Informatics Centre (NIC)<br>
     Data Provided by CBSE, New Delhi
   </div>
 
-  <!-- JavaScript to show error -->
   <script>
-    document.getElementById("cbseForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      document.getElementById("errorMsg").style.display = "block";
+    document.getElementById('resultForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formContainer = document.getElementById('formContainer');
+      const spinner = document.getElementById('loadingSpinner');
+      const pdfContainer = document.getElementById('pdfContainer');
+
+      document.querySelector('form').style.display = 'none';
+      spinner.style.display = 'block';
+
+      setTimeout(() => {
+        spinner.style.display = 'none';
+        formContainer.style.display = 'none';
+        pdfContainer.style.display = 'block';
+      }, 3000);
     });
   </script>
 
